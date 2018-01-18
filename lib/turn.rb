@@ -13,11 +13,13 @@ end
 
 def valid_move(board, index)
   if index.between?(0, 8) && !position_taken(board, index)
-    
+    true
+  else
+    false
 end
 
 def position_taken(board, index)
-  baord[index] != " "
+  board[index] != " "
 end
 
 def input_to_index(input)
