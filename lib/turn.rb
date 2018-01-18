@@ -12,7 +12,11 @@ def display_board(board)
 end
 
 def valid_move(board, index)
-  index.between?(0, 8) && !position_taken(board, index)
+  if index.between?(0, 8) && !position_taken(board, index)
+    move(board, index)
+  else
+    puts "Invalid input!"
+  turn(board)
 end
 
 def position_taken(board, index)
