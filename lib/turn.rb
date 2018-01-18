@@ -1,5 +1,6 @@
 def turn(board)
   puts "Please enter 1-9:"
+
 end
 
 def display_board(board)
@@ -14,10 +15,18 @@ def valid_move(board, index)
 
 end
 
-def position_taken(board)
-
+def position_taken(board, index)
+  if board[index] == " " || board[index] == "" || board[index] == nil
+    false
+  elsif board[index] == "X" || "O"
+    true
+  end
 end
 
-def move(board, index)
+def input_to_index(input)
+  input.to_i - 1
+end
 
+def move(board, index, player = "X")
+  board[index] = player
 end
