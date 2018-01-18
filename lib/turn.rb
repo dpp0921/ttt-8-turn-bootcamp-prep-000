@@ -16,7 +16,7 @@ def valid_move(board, index)
     move(board, index)
   else
     puts "Invalid input!"
-  
+
 end
 
 def position_taken(board, index)
